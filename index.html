@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Maven+Pro:900|Overpass" rel="stylesheet">
+  <title>HTML + CSS From Validation</title>
+</head>
+
+<body>
+  <form class="form" action="yourUrl">
+    <h1 class="form__header">Contact form</h1>
+    <div class="form__content">
+      <div class="form__field">
+        <input type="text" class="form__field__input" name="firstName" placeholder=" " pattern="[A-Za-z]{2,99}" required>
+        <label for="" class="form__field__label">First Name</label>
+        <p class="form__field__error">Is your First Name correct?</p>
+        <div class="form__field__state-icon"></div>
+      </div>
+      <div class="form__field">
+        <input type="text" class="form__field__input" placeholder=" " pattern="[A-Za-z]{2,99}" required>
+        <label for="" class="form__field__label">Last Name</label>
+        <p class="form__field__error">Is your Last Name correct?</p>
+        <div class="form__field__state-icon"></div>
+      </div>
+      <div class="form__field">
+        <input type="number" class="form__field__input" placeholder=" " max="200" required>
+        <label for="" class="form__field__label">Age</label>
+        <p class="form__field__error">Is your Age correct?</p>
+        <div class="form__field__state-icon"></div>
+      </div>
+      <div class="form__field">
+        <input type="email" class="form__field__input" placeholder=" " required>
+        <label for="" class="form__field__label">Email Address</label>
+        <p class="form__field__error">Is your Email correct?</p>
+        <div class="form__field__state-icon"></div>
+      </div>
+      <div class="form__button">
+        <button type="submit">Submit</button>
+      </div>
+    </div>
+  </form>
+</body>
+
+</html>

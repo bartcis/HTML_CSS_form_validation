@@ -1,0 +1,138 @@
+body {
+  background: linear-gradient(125deg, #9683EE, #3F4FDA);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #65449B;
+}
+
+button {
+  width: 150px;
+  background: #65449B;
+  color: white;
+  font-family: 'Maven Pro', sans-serif;
+  font-size: 1rem;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  cursor: pointer;
+}
+
+button:hover {
+  background: #392657;
+}
+
+.form {
+  width: 500px;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 20px;
+  box-shadow: 0 0 20px #65449B;
+  font-family: 'Overpass', sans-serif;
+  overflow: hidden;
+}
+
+.form__header {
+  font-family: 'Maven Pro', sans-serif;
+  background: #65449B;
+  color: white;
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
+}
+
+.form__field__error {
+  color: #ff4d4d;
+  margin: .25rem 0;
+  font-size: .8rem;
+  transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  max-height: 0;
+  opacity: 0;
+}
+
+.form__button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form__content {
+  padding: 2rem;
+}
+
+.form__field {
+  position: relative;
+  margin: 0 0 1rem;
+  width: 100%;
+}
+
+.form__field__label {
+  position: absolute;
+  z-index: 0;
+  top: .35rem;
+  transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.form__field__input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #65449B;
+  background-color: transparent;
+  padding: .5rem 0;
+  font-size: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.form__field__state-icon {
+  position: absolute;
+  width: 1.5rem;
+  height: 30px;
+  right: .5rem;
+  top: .25rem;
+  background-repeat: no-repeat;
+}
+
+.form__field__input:invalid {
+  border-bottom: 1px solid #ff4d4d;
+}
+
+.form__field__input:placeholder-shown {
+  border-bottom: 1px solid #65449B;
+}
+
+.form__field__input:focus {
+  outline: none;
+}
+
+.form__field__input:valid ~ .form__field__state-icon {
+  background-image: url(/images/success.svg);
+}
+
+.form__field__input:invalid ~ .form__field__state-icon {
+  background-image: url(/images/error.svg);
+}
+.form__field__input:placeholder-shown ~ .form__field__state-icon {
+  background-image: url();
+}
+
+.form__field__input:invalid ~ .form__field__error {
+  max-height: 40px;
+  opacity: 1;
+}
+.form__field__input:placeholder-shown ~ .form__field__error {
+  max-height: 0;
+  opacity: 0;
+}
+
+.form__field__input:focus + .form__field__label,
+.form__field__input:valid + .form__field__label,
+.form__field__input:invalid + .form__field__label {
+  top: -.5rem;
+  font-size: .6rem;
+}
+
+.form__field__input:placeholder-shown + .form__field__label {
+  top: .35rem;
+  font-size: 1rem;
+}
